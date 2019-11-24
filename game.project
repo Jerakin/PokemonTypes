@@ -1,0 +1,9 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[project]
+title = pTypes
+
+[library]
+include_dirs = ptypes
+

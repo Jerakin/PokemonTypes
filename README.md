@@ -1,13 +1,35 @@
-# Welcome to Defold
+# pTypes
 
-This project was created from the "empty" project template.
+Pokemon Types is a lua module to figure out what move type a Pokemon of a given type pair
+is weak and strong against.
 
-The settings in ["game.project"](defold://open?path=/game.project) are all the default. A bootstrap empty ["main.collection"](defold://open?path=/main/main.collection) is included.
+### Installation
+You can use pTypes in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your game.project file and in the dependencies field under project add:
+  
+	https://github.com/Jerakin/PokemonTypes/archive/master.zip
 
-Check out [the documentation pages](https://defold.com/learn) for examples, tutorials, manuals and API docs.
 
-If you run into trouble, help is available in [our forum](https://forum.defold.com).
+### Usage
 
-Happy Defolding!
+```lua
+-- Require the module
+local ptypes = require "ptypes.main"
 
----# PokemonTypes
+local pokemon
+
+-- Creates a "model" of a Normal type pokemon.
+pokemon = ptype.Model("Normal")
+
+-- You can create a model of dual type Pokemon too.
+pokemon = ptype.Model("Ghost", "Electric")
+
+-- If you prefer you can use the enum.
+pokemon = ptype.Model(ptype.Fairy)
+
+-- After the model is constructed you can find out which resitances it have by looking
+-- at the corresponding table.
+pprint(pokemon.vulnerabilities)
+pprint(pokemon.resistances)
+pprint(pokemon.immunities)
+
+```

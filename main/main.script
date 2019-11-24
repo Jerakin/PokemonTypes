@@ -1,0 +1,20 @@
+local ptype = require "ptypes.main"
+
+function init(self)
+	local pokemon
+	
+	-- Creates a "model" of a Normal type pokemon.
+	pokemon = ptype.Model("Normal")
+
+	-- You can create a model of dual type Pokemon too.
+	pokemon = ptype.Model("Ghost", "Electric")
+
+	-- If you prefer you can use the enum.
+	pokemon = ptype.Model(ptype.Fairy)
+
+	-- After the model is constructed you can find out which resitances it have by looking
+	-- at the corresponding table.
+	pprint(pokemon.vulnerabilities)
+	pprint(pokemon.resistances)
+	pprint(pokemon.immunities)
+end
