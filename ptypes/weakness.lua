@@ -71,13 +71,13 @@ M.Fire.rock = 2.0
 M.Fire.steel = 0.5
 M.Fire.fairy = 0.5
 
-M.Fire = M.BaseType:__constructor()
-M.Fire.fire = 0.5
-M.Fire.water = 0.5
-M.Fire.electric = 2.0
-M.Fire.grass = 2.0
-M.Fire.ice = 0.5
-M.Fire.steel = 0.5
+M.Water = M.BaseType:__constructor()
+M.Water.fire = 0.5
+M.Water.water = 0.5
+M.Water.electric = 2.0
+M.Water.grass = 2.0
+M.Water.ice = 0.5
+M.Water.steel = 0.5
 
 M.Electric = M.BaseType:__constructor()
 M.Electric.electric = 0.5
