@@ -88,7 +88,7 @@ function M.Model(type_1, type_2)
 	-- Filter the results into tables
 	self.vulnerabilities = type_filter(self, function(a) return a > 1 end)
 	self.immunities = type_filter(self, function(a) return a == 0 end)
-	self.resistances = type_filter(self, function(a) return a < 1 end)
+	self.resistances = type_filter(self, function(a) return a < 1 and a > 0 end)
 	return self
 end
 
